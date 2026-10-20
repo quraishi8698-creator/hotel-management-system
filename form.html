@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Edit' if h else 'Add' }} Hotel{% endblock %}
+{% block content %}
+<a href="{{ url_for('index') }}" class="btn btn-link px-0">&larr; Back</a>
+<div class="card p-4">
+  <h3>{{ 'Edit Hotel' if h else 'Add New Hotel' }}</h3>
+  <form method="post">
+    <div class="row g-3">
+      <div class="col-md-6"><label class="form-label">Hotel Name</label>
+        <input class="form-control" name="Hotel_Name" required value="{{ h.Hotel_Name if h else '' }}"></div>
+      <div class="col-md-6"><label class="form-label">City</label>
+        <input class="form-control" name="City" required value="{{ h.City if h else '' }}"></div>
+      <div class="col-md-3"><label class="form-label">Hotel Type</label>
+        <select class="form-select" name="Hotel_Type">
+          {% for t in ['Luxury','Premium','Budget'] %}<option {{ 'selected' if h and h.Hotel_Type==t }}>{{ t }}</option>{% endfor %}</select></div>
+      <div class="col-md-3"><label class="form-label">Price Category</label>
+        <select class="form-select" name="Price_Category">
+          {% for t in ['Luxury','Premium','Budget'] %}<option {{ 'selected' if h and h.Price_Category==t }}>{{ t }}</option>{% endfor %}</select></div>
+      <div class="col-md-2"><label class="form-label">Rating (0-5)</label>
+        <input class="form-control" type="number" step="0.1" min="0" max="5" name="Rating" required value="{{ h.Rating if h else '' }}"></div>
+      <div class="col-md-2"><label class="form-label">Suitable For</label>
+        <input class="form-control" name="Suitable_For" value="{{ h.Suitable_For if h else '' }}"></div>
+      <div class="col-md-2"><label class="form-label">Popularity</label>
+        <select class="form-select" name="Popularity">
+          {% for t in ['High','Medium','Low'] %}<option {{ 'selected' if h and h.Popularity==t }}>{{ t }}</option>{% endfor %}</select></div>
+    </div>
+    <hr>
+    <h6>Scores (1-5)</h6>
+    <div class="row g-3">
+      {% for f in score_fields %}
+      <div class="col-6 col-md-3"><label class="form-label">{{ f.replace('_',' ') }}</label>
+        <input class="form-control" type="number" min="1" max="5" name="{{ f }}" required value="{{ h[f] if h else 3 }}"></div>
+      {% endfor %}
+    </div>
+    <button class="btn btn-primary mt-4">{{ 'Save Changes' if h else 'Add Hotel' }}</button>
+  </form>
+</div>
+{% endblock %}

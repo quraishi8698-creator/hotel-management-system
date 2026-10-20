@@ -1,0 +1,51 @@
+Hotel_ID,Hotel_Name,City,Hotel_Type,Rating,Cleanliness,Location,Service,Room_Quality,Food_Quality,Staff_Behaviour,Value_for_Money,Amenities,WiFi,Room_Service,Swimming_Pool,Parking,Breakfast,Price_Category,Suitable_For,Popularity
+1,Taj Palace Mumbai,Mumbai,Luxury,4.8,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Business Couple,High
+2,The Oberoi Mumbai,Mumbai,Luxury,4.7,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Business Couple,High
+3,Trident Nariman Point,Mumbai,Luxury,4.6,5,5,4,5,5,5,5,5,5,5,5,5,5,Luxury,Business Family,High
+4,ITC Maratha,Mumbai,Luxury,4.5,5,5,5,4,5,5,5,5,5,5,5,5,5,Luxury,Business Family,High
+5,Hyatt Regency Mumbai,Mumbai,Premium,4.4,5,4,5,5,4,5,5,5,5,4,5,5,5,Premium,Business Family,High
+6,Novotel Mumbai Juhu Beach,Mumbai,Premium,4.2,4,4,4,4,4,4,5,5,4,4,5,4,4,Premium,Family Couple,Medium
+7,The Lalit Mumbai,Mumbai,Premium,4.3,4,5,4,4,4,5,4,5,4,4,5,4,4,Premium,Business Family,Medium
+8,Holiday Inn Mumbai International Airport,Mumbai,Budget,4.1,4,4,4,4,4,4,4,4,4,4,5,4,4,Budget,Business Family,Medium
+9,Ginger Mumbai Andheri,Mumbai,Budget,3.9,4,4,3,4,3,4,4,4,3,4,4,4,3,Budget,Solo Business,Low
+10,Hotel Suba International,Mumbai,Budget,4.0,4,4,4,3,4,4,4,4,4,4,4,4,4,Budget,Business Family,Low
+11,Taj Mahal Palace,Mumbai,Luxury,4.9,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Couple Family,High
+12,Leela Palace Bengaluru,Bengaluru,Luxury,4.8,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Couple Business,High
+13,ITC Gardenia,Bengaluru,Luxury,4.7,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Business Family,High
+14,Taj Bangalore,Bengaluru,Premium,4.5,5,5,4,5,4,5,5,5,5,4,5,5,5,Premium,Business Family,High
+15,The Park Bangalore,Bengaluru,Premium,4.2,4,4,4,4,4,4,5,4,4,4,5,4,4,Premium,Couple Business,Medium
+16,Radisson Blu Pune,Pune,Premium,4.3,4,4,5,4,4,5,5,4,4,4,5,4,4,Premium,Business Family,Medium
+17,Hyatt Pune,Pune,Premium,4.4,5,4,5,4,4,5,5,5,4,4,5,4,4,Premium,Business Family,High
+18,Conrad Pune,Pune,Luxury,4.6,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Business Couple,High
+19,Novotel Pune Viman Nagar,Pune,Premium,4.2,4,4,4,4,4,4,5,4,4,4,5,4,4,Premium,Business Family,Medium
+20,Sheraton Grand Pune,Pune,Luxury,4.5,5,5,5,5,4,5,5,5,5,4,5,5,5,Luxury,Business Family,High
+21,The Westin Pune,Pune,Luxury,4.5,5,5,5,5,4,5,5,5,5,5,5,5,5,Luxury,Business Couple,High
+22,Hyatt Regency Pune,Pune,Premium,4.4,5,4,5,4,4,5,5,5,4,4,5,4,4,Premium,Business Family,High
+23,JW Marriott Pune,Pune,Luxury,4.7,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Business Couple,High
+24,Blue Diamond Pune,Pune,Premium,4.3,4,4,4,4,4,4,5,5,4,4,5,4,4,Premium,Family Couple,Medium
+25,Ramee Grand Pune,Pune,Budget,4.0,4,4,3,4,3,4,4,4,4,4,4,4,4,Budget,Family Solo,Low
+26,The Corinthians Resort Pune,Pune,Premium,4.3,4,4,5,4,4,5,4,5,4,4,5,4,4,Premium,Family Couple,Medium
+27,Ramada Plaza Pune,Pune,Premium,4.2,4,4,4,4,4,4,4,5,4,4,5,4,4,Premium,Family Business,Medium
+28,Hotel Sagar Plaza,Pune,Budget,3.8,3,4,3,4,3,4,4,4,3,4,4,3,4,Budget,Solo Business,Low
+29,The Ritz Carlton Bangalore,Bengaluru,Luxury,4.8,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Couple Business,High
+30,Shangri La Bengaluru,Bengaluru,Luxury,4.7,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Couple Family,High
+31,Taj Coromandel,Chennai,Luxury,4.6,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Business Family,High
+32,ITC Grand Chola,Chennai,Luxury,4.8,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Business Couple,High
+33,Hyatt Regency Chennai,Chennai,Premium,4.3,4,5,4,4,4,5,5,4,4,4,5,4,4,Premium,Business Family,Medium
+34,The Leela Palace Chennai,Chennai,Luxury,4.7,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Couple Family,High
+35,Taj Krishna Hyderabad,Hyderabad,Luxury,4.6,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Business Family,High
+36,ITC Kakatiya Hyderabad,Hyderabad,Premium,4.4,5,4,5,4,4,5,5,5,4,4,5,4,4,Premium,Business Family,High
+37,Trident Hyderabad,Hyderabad,Luxury,4.6,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Business Couple,High
+38,Taj Falaknuma Palace,Hyderabad,Luxury,4.9,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Couple Family,High
+39,Novotel Hyderabad Airport,Hyderabad,Premium,4.2,4,4,4,4,4,4,5,4,4,4,5,4,4,Premium,Business Family,Medium
+40,The Leela Palace New Delhi,Delhi,Luxury,4.8,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Business Couple,High
+41,ITC Maurya New Delhi,Delhi,Luxury,4.7,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Business Family,High
+42,The Imperial New Delhi,Delhi,Luxury,4.7,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Couple Business,High
+43,Radisson Blu Delhi,Delhi,Premium,4.2,4,4,4,4,4,4,5,4,4,4,5,4,4,Premium,Business Family,Medium
+44,Hotel Clarks Shiraz,Agra,Premium,4.3,4,4,4,4,4,5,4,5,4,4,5,4,4,Premium,Family Couple,Medium
+45,ITC Mughal Agra,Agra,Luxury,4.7,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Couple Family,High
+46,Tajview Agra,Agra,Premium,4.5,5,4,4,5,4,5,5,5,4,4,5,4,4,Premium,Family Couple,Medium
+47,Rambagh Palace Jaipur,Jaipur,Luxury,4.9,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Couple Family,High
+48,ITC Rajputana Jaipur,Jaipur,Luxury,4.6,5,5,5,5,4,5,5,5,5,5,5,5,5,Luxury,Business Family,High
+49,Fairmont Jaipur,Jaipur,Luxury,4.6,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Couple Family,High
+50,Taj Lake Palace Udaipur,Udaipur,Luxury,4.9,5,5,5,5,5,5,5,5,5,5,5,5,5,Luxury,Couple Family,High

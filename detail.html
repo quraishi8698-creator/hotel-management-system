@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}{{ h.Hotel_Name }}{% endblock %}
+{% block content %}
+<a href="{{ url_for('index') }}" class="btn btn-link px-0">&larr; Back to hotels</a>
+<div class="card p-4">
+  <div class="d-flex justify-content-between flex-wrap">
+    <div>
+      <h2>{{ h.Hotel_Name }}</h2>
+      <p class="text-muted">📍 {{ h.City }} &nbsp;|&nbsp; <span class="badge badge-{{ h.Hotel_Type }}">{{ h.Hotel_Type }}</span>
+        &nbsp;|&nbsp; Price: {{ h.Price_Category }}</p>
+    </div>
+    <div class="text-end"><h1 class="mb-0">⭐ {{ h.Rating }}</h1><small class="text-muted">Overall rating</small></div>
+  </div>
+  <p>👥 Suitable for: <strong>{{ h.Suitable_For }}</strong> &nbsp; 🔥 Popularity: <strong>{{ h.Popularity }}</strong></p>
+  <hr>
+  <h5>Detailed Scores (out of 5)</h5>
+  <div class="row">
+    {% for name, val in scores %}
+    <div class="col-md-6 mb-2">
+      <div class="d-flex justify-content-between"><span>{{ name }}</span><span>{{ val }}/5</span></div>
+      <div class="progress" style="height:8px"><div class="progress-bar bg-warning" style="width: {{ val * 20 }}%"></div></div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="mt-4 d-flex gap-2">
+    <a class="btn btn-secondary" href="{{ url_for('edit', hotel_id=h.Hotel_ID) }}">Edit</a>
+    <form method="post" action="{{ url_for('delete', hotel_id=h.Hotel_ID) }}" onsubmit="return confirm('Delete this hotel?')">
+      <button class="btn btn-danger">Delete</button></form>
+  </div>
+</div>
+{% endblock %}

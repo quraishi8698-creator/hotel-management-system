@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row g-3 mb-4">
+  <div class="col-6 col-md-3"><div class="card stat p-3"><small class="text-muted">Total Hotels</small><h3>{{ stats.total }}</h3></div></div>
+  <div class="col-6 col-md-3"><div class="card stat p-3"><small class="text-muted">Cities</small><h3>{{ stats.cities }}</h3></div></div>
+  <div class="col-6 col-md-3"><div class="card stat p-3"><small class="text-muted">Average Rating</small><h3>{{ stats.avg_rating }} ★</h3></div></div>
+  <div class="col-6 col-md-3"><div class="card stat p-3"><small class="text-muted">Luxury Hotels</small><h3>{{ stats.luxury }}</h3></div></div>
+</div>
+
+<form class="card p-3 mb-4" method="get">
+  <div class="row g-2">
+    <div class="col-md-3"><input class="form-control" name="q" placeholder="Search name, city..." value="{{ args.get('q','') }}"></div>
+    <div class="col-md-2">
+      <select class="form-select" name="city"><option value="">All Cities</option>
+        {% for c in cities %}<option {{ 'selected' if args.get('city')==c }}>{{ c }}</option>{% endfor %}</select></div>
+    <div class="col-md-2">
+      <select class="form-select" name="type"><option value="">All Types</option>
+        {% for t in types %}<option {{ 'selected' if args.get('type')==t }}>{{ t }}</option>{% endfor %}</select></div>
+    <div class="col-md-2">
+      <select class="form-select" name="popularity"><option value="">Any Popularity</option>
+        {% for p in ['High','Medium','Low'] %}<option {{ 'selected' if args.get('popularity')==p }}>{{ p }}</option>{% endfor %}</select></div>
+    <div class="col-md-2">
+      <select class="form-select" name="sort">
+        <option value="id">Sort: ID</option>
+        <option value="rating" {{ 'selected' if args.get('sort')=='rating' }}>Sort: Rating</option>
+        <option value="name" {{ 'selected' if args.get('sort')=='name' }}>Sort: Name</option></select></div>
+    <div class="col-md-1 d-grid"><button class="btn btn-primary">Go</button></div>
+  </div>
+</form>
+
+<p class="text-muted">Showing {{ hotels|length }} hotel(s)</p>
+<div class="row g-3">
+  {% for h in hotels %}
+  <div class="col-md-6 col-lg-4">
+    <div class="card card-hotel h-100">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <h5 class="card-title">{{ h.Hotel_Name }}</h5>
+          <span class="badge badge-{{ h.Hotel_Type }} align-self-start">{{ h.Hotel_Type }}</span>
+        </div>
+        <p class="text-muted mb-1">📍 {{ h.City }}</p>
+        <p class="mb-1">⭐ <strong>{{ h.Rating }}</strong> / 5</p>
+        <p class="mb-1">👥 {{ h.Suitable_For }}</p>
+        <p class="mb-2">🔥 Popularity: {{ h.Popularity }}</p>
+        <div class="small text-muted">
+          {% if h.WiFi|int >= 4 %}📶 WiFi {% endif %}
+          {% if h.Swimming_Pool|int >= 4 %}🏊 Pool {% endif %}
+          {% if h.Parking|int >= 4 %}🅿️ Parking {% endif %}
+          {% if h.Breakfast|int >= 4 %}🍳 Breakfast{% endif %}
+        </div>
+      </div>
+      <div class="card-footer bg-white d-flex gap-2">
+        <a class="btn btn-sm btn-outline-primary" href="{{ url_for('detail', hotel_id=h.Hotel_ID) }}">View</a>
+        <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('edit', hotel_id=h.Hotel_ID) }}">Edit</a>
+        <form method="post" action="{{ url_for('delete', hotel_id=h.Hotel_ID) }}" onsubmit="return confirm('Delete this hotel?')">
+          <button class="btn btn-sm btn-outline-danger">Delete</button></form>
+      </div>
+    </div>
+  </div>
+  {% else %}
+  <div class="col-12"><div class="alert alert-info">No hotels match your filters.</div></div>
+  {% endfor %}
+</div>
+{% endblock %}
